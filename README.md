@@ -1,10 +1,10 @@
 #                                              THREE-TIER-ARCHITECTURE
 
-## INTRODUCTION
+### INTRODUCTION
 
 This documentation provides an overview and step-by-step guide to deploy a Three-Tier Architecture on AWS using Terraform. The Three-Tier Architecture consists of three logical layers: Presentation layer, Application layer, and Data layer. Each layer is designed to handle specific functions, promoting modularity, scalability, availability, resilience and maintainability.
 
-## ARCHITECTURE OVERVIEW
+### ARCHITECTURE OVERVIEW
 
 1. VIRTUAL PRIVATE CLOUD FOR REGION-1 : A Virtual Private Cloud (VPC) is a logically isolated virtual network in the cloud that allows 
    the provisioning and management of resources, such as compute instances, databases, and LoadBalancers, within a defined virtual 
@@ -64,8 +64,13 @@ This documentation provides an overview and step-by-step guide to deploy a Three
            related operations, such as data encryption and decryption.
 
            
-## PREREQUISITES
+### PREREQUISITES
 
 - An AWS account with appropriate IAM permissions. Recommendable, create a user with administrative privileges globally. This would enable seamless transitioning between regions while provisioning multi-regional resources.
 - Terraform installed on your local machine.
 - Basic knowledge of AWS services, Terraform, and Networking concepts.
+
+### DEPLOYMENT STEPS
+The method can be divided into two :-
+i. Multi-Team deployment with Remote State Management using S3 and Dynamo-DB 
+ii. Deployment without Remote State Management 
