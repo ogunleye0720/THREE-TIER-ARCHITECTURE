@@ -94,7 +94,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - [X] [Network(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Network)
 - [X] [RDS(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS)
 - [X] [Route_53(Required)]()
-- [X] [RDS_read_replica(Optional)]()
+- [X] [RDS_read_replica(Optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS_read_replica)
 
 ### DEPLOYMENT STEPS
 The method of Deployment can be divided into two :-
