@@ -72,5 +72,5 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 
 ### DEPLOYMENT STEPS
 The method can be divided into two :-
-i. Multi-Team deployment with Remote State Management using S3 and Dynamo-DB 
-ii. Deployment without Remote State Management 
+- Multi-Team deployment with Remote State Management using S3 and Dynamo-DB
+- Deployment without Remote State Management 
