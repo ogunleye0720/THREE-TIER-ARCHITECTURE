@@ -90,7 +90,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - [X] [KMS(Optional IF storage_encryption is set to False)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/KMS)
 - [X] [WAF(Optional)]()
 - [X] [Compute(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Compute)
-- [X] [Load-Balancer(Required)]()
+- [X] [Load-Balancer(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Load-Balancer)
 - [X] [Network(Required)]()
 - [X] [RDS(Required)]()
 - [X] [Route_53(Required)]()
