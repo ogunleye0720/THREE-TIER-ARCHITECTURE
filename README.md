@@ -84,7 +84,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 | <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.0 |
 
 ### MODULES 
-#### Click On The Module To Check Requirements
+#### Click On The Module To Check Requirements in the variables.tf file
 - [x] [Backend(Required For Multi-team deployment, else optional)]()
 - [X] [Cloudwatch_alarm(Optional)]()
 - [X] [KMS(Optional IF storage_encryption is set to False)]()
