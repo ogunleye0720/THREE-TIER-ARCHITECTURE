@@ -77,11 +77,24 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | => 4.0 |
 
-## PROVIDERS
+### PROVIDERS
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.0 |
+
+### MODULES 
+#### Click On The Module To Check Requirements
+- [x] [Backend(Required For Multi-team deployment, else optional)]()
+- [X] [Cloudwatch_alarm(Optional)]()
+- [X] [KMS(Optional IF storage_encryption is set to False)]()
+- [X] [WAF(Optional)]()
+- [X] [Compute(Required)]()
+- [X] [Load-Balancer(Required)]()
+- [X] [Network(Required)]()
+- [X] [RDS(Required)]()
+- [X] [Route_53(Required)]()
+- [X] [RDS_read_replica(Optional)]()
 
 ### DEPLOYMENT STEPS
 The method of Deployment can be divided into two :-
