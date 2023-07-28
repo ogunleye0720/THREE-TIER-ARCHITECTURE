@@ -1,4 +1,4 @@
-# THREE-TIER-ARCHITECTURE
+                                           <h1> THREE-TIER-ARCHITECTURE </h1>
 
 ## INTRODUCTION
 
@@ -31,7 +31,18 @@ This documentation provides an overview and step-by-step guide to deploy a Three
            
      - [x] CLOUD-WATCH-ALARM AND SNS_TOPIC:- AWS Cloud-Watch Alarm together with SNS Topic and Subscription were configured to monitor 
            the cpu-usage of the instances in the presentation-layer and application_layer. The metrics pulled were sent to an 
-           administrative email for notification. 
+           administrative email for notification.
+           
+     - [x] MULTI-AZ RDS INSTANCES:- A RELATIONAL DATABASE INSTANCE was configured, with the multi-availability zone option provided by 
+           AWS. The Multi-AZ deployment provides enhanced availability and fault tolerance for the RDS database by replicating the 
+           database to a standby instance in a different Availability Zone within the same AWS Region. Incase the primary data-base 
+           fails, it fails-over to the standby data-base automatically. Storage encyption was enabled to enhance data-base security, when 
+           the data in the storage is at rest state or in transit.
+           
+     - [x] MULTI-AZ RDS INSTANCES:- 
+
+           
+           
 
              
 
