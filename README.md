@@ -70,6 +70,13 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - Terraform installed on your local machine.
 - Basic knowledge of AWS services, Terraform, and Networking concepts.
 
+### Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
+
 ### DEPLOYMENT STEPS
 The method of Deployment can be divided into two :-
 - [x] Multi-Team deployment with Remote State Management using S3 and Dynamo-DB
