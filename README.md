@@ -1,4 +1,4 @@
-                                           <h1> THREE-TIER-ARCHITECTURE </h1>
+#                                              THREE-TIER-ARCHITECTURE
 
 ## INTRODUCTION
 
