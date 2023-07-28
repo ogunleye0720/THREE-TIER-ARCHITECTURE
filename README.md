@@ -86,7 +86,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 ### MODULES 
 I have created modules for the resources required to create the three-tier-architecture. This was done to enable reusability of specific resources across different projects and environments. This promotes consistency and reduces duplication of effort.
 
-#### Click On The Module To Check Requirements in the variables.tf file
+#### Click On The Module To Check variables description in the variables.tf file
 
 - [x] [Backend(Required For Multi-team deployment, else optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/Backend)
 - [X] [Cloudwatch_alarm(Optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Cloudwatch_Alarm)
