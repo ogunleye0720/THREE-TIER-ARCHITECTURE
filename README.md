@@ -92,7 +92,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - [X] [Compute(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Compute)
 - [X] [Load-Balancer(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Load-Balancer)
 - [X] [Network(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Network)
-- [X] [RDS(Required)]()
+- [X] [RDS(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS)
 - [X] [Route_53(Required)]()
 - [X] [RDS_read_replica(Optional)]()
 
