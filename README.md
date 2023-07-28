@@ -84,7 +84,10 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 | <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.0 |
 
 ### MODULES 
+I have created modules for the resources required to create the three-tier-architecture. This was done to enable reusability of specific resources across different projects and environments. This promotes consistency and reduces duplication of effort.
+
 #### Click On The Module To Check Requirements in the variables.tf file
+
 - [x] [Backend(Required For Multi-team deployment, else optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/Backend)
 - [X] [Cloudwatch_alarm(Optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Cloudwatch_Alarm)
 - [X] [KMS(Optional IF storage_encryption is set to False)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/KMS)
@@ -93,7 +96,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - [X] [Load-Balancer(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Load-Balancer)
 - [X] [Network(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Network)
 - [X] [RDS(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS)
-- [X] [Route_53(Required)]()
+- [X] [Route_53(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Route_53)
 - [X] [RDS_read_replica(Optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/RDS_read_replica)
 
 ### DEPLOYMENT STEPS
