@@ -71,6 +71,6 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - Basic knowledge of AWS services, Terraform, and Networking concepts.
 
 ### DEPLOYMENT STEPS
-The method can be divided into two :-
+The method of Deployment can be divided into two :-
 - [x] Multi-Team deployment with Remote State Management using S3 and Dynamo-DB
 - [x] Deployment without Remote State Management 
