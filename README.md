@@ -87,7 +87,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 #### Click On The Module To Check Requirements in the variables.tf file
 - [x] [Backend(Required For Multi-team deployment, else optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/Backend)
 - [X] [Cloudwatch_alarm(Optional)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Cloudwatch_Alarm)
-- [X] [KMS(Optional IF storage_encryption is set to False)]()
+- [X] [KMS(Optional IF storage_encryption is set to False)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/KMS)
 - [X] [WAF(Optional)]()
 - [X] [Compute(Required)](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/tree/master/modules/Compute)
 - [X] [Load-Balancer(Required)]()
