@@ -39,26 +39,32 @@ This documentation provides an overview and step-by-step guide to deploy a Three
            fails, it fails-over to the standby data-base automatically. Storage encyption was enabled to enhance data-base security, when 
            the data in the storage is at rest state or in transit.
            
-     - [x] MULTI-AZ RDS INSTANCES:- 
+     - [x] KMS-KEY:-  AWS Key Management Key was created to manage, and use encryption keys to protect the data in the RDS instances. It 
+           enables for seamless encryption and decryption of data in the storage.
+           
+     - [x] PRESENTATION_LAYER:- This logical layer is responsible  for the user interface, and interacts directly with the end-users. It 
+           is typically implemented using a web server and load balancer to serve static content and forward requests to the Application 
+           Layer. It consists of two public accessible subnets by default.
+           The presentation Layer consists of the following resources:
+
+          -  NAT-GATEWAY :- The Network Address Translator in AWS, enables the instances in a private subnet to  communicate with the 
+            internet or other AWS services while preventing inbound traffic initiated from the internet to reach the instances directly.
+
+          -  LAUNCH-TEMPLATE AND AUTOSCALING GROUP :- An AWS Launch Template is a configuration template that defines the various 
+             parameters needed to launch EC2 instances. An AWS Auto Scaling group is a core component of Amazon Web Services (AWS) that 
+             helps automatically scale instances based on demand. It enables the maintenance of a desired number of instances in an 
+             Amazon Elastic Compute Cloud (EC2) fleet and automatically adjusts the capacity to meet changing application needs.
+  
+     - [x] APPLICATION_LAYER : This logical layer handles the business logic and application functionalities. It handles user requests 
+           from the Presentation Layer, communicates with the Data Layer, and returns processed data to the Presentation Layer. This 
+           layer consists of two private subnets by default. The instances created in this subnet are publicly inaccessible.
+           
+     - [x] DATA_LAYER : This is the bottom layer that deals with data storage and retrieval. It hosts databases and handles all data- 
+           related operations, such as data encryption and decryption
 
            
-           
-
-             
-
-           
-  
-- PRESENTATION LAYER : This logical layer is responsible  for the user interface, and interacts directly with the end-users. It is typically implemented using a web server and load balancer to serve static content and forward requests to the Application Layer.
-  The presentation Layer consists of the following resources:
-  
-    - [x] NAT-GATEWAY :- The Network Address Translator in AWS, enables the instances in a private subnet to  communicate with the internet or other AWS services while preventing inbound traffic initiated from the internet to reach the instances directly.
-          
-    - [x] LAUNCH-TEMPLATE AND AUTOSCALING GROUP :- An AWS Launch Template is a configuration template that defines the various parameters needed to launch EC2 instances. An AWS Auto Scaling group is a core component of Amazon Web Services (AWS) that helps automatically scale instances based on demand. It enables the maintenance of a desired number of instances in an Amazon Elastic Compute Cloud (EC2) fleet and automatically adjusts the capacity to meet changing application needs.
-  
-- APPLICATION LAYER : ThI logical layer handles the business logic and application functionalities. It handles user requests from the Presentation Layer, communicates with the Data Layer, and returns processed data to the Presentation Layer.
-- DATA LAYER : This is the bottom layer that deals with data storage and retrieval. It hosts databases and handles all data-related operations, such as data encryption and decryption.
-- 
 ## PREREQUISITES
+
 - An AWS account with appropriate IAM permissions. Recommendable, create a user with administrative privileges globally. This would enable seamless transitioning between regions while provisioning multi-regional resources.
 - Terraform installed on your local machine.
 - Basic knowledge of AWS services, Terraform, and Networking concepts.
