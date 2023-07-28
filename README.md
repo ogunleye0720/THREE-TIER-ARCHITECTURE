@@ -70,14 +70,14 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 - Terraform installed on your local machine.
 - Basic knowledge of AWS services, Terraform, and Networking concepts.
 
-### Requirements
+### REQUIREMENTS
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.0 |
 
-## Providers
+## PROVIDERS
 
 | Name | Version |
 |------|---------|
