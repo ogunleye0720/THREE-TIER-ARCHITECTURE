@@ -418,33 +418,23 @@ NOTE !!! The Identifier Is Equivalent To The [var.rds_identifier](https://github
 STEP 2 : - Open The cloned THREE-TIER-ARCHITECTURE Directory In Your Local Machine, Locate modules sub-directory And Open The 
            RDS_read_replica module. 
 
-           ```
            $ path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica
-           ```
 STEP 3 : - Open The variables.tf File And Paste The Source_db_arn in The default placeholder. For Instance;
 
-           ```
               variable "source_db_arn" {
                   type = string
                   default = "arn:aws:rds:us-east-1:123456789012:db:db-identifier"     
         
                   # Example of source_db_arn arn:aws:rds:us-east-1:123456789012:db:db-identifier
               }
-           ```
 STEP 4 : - Edit The .tf Files To Suit Your Use-Case, Ensure All Changes Are Saved.
 
 STEP 5 : - Deploy The RDS_read_replica.
 
-           ```
            path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform init
-           ```
            
-           ```
            path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform plan
-           ```
-           
-           ```
-           path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform apply -auto-approve
-           ```
 
+           path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform apply -auto-approve
+         
 STEP 6 : - Wait Until The Process Is Completed!!! This Process Might Take Approximately 25mins. 
