@@ -27,3 +27,7 @@ variable "billing_mode" {
   type = string
   default = "PROVISIONED"
 }
+variable "versioning_enabled" {
+  tyoe = bool
+  default = false
+}

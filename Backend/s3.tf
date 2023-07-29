@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "cloudgen-s3" {
   bucket = "cloudgen-bucket-${random_string.random.id}"
 
   versioning {
-    enabled = true
+    enabled = var.versioning_enabled
   }
 
    server_side_encryption_configuration {
