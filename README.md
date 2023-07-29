@@ -402,7 +402,8 @@ In Summary, An AWS Read_Replica Is A DataBase Service Provided By AWS To Enable 
 
 ## STEPS TO DEPLOY A CROSS-REGIONAL READ_REPLICA RDS INSTANCE
 
-STEP 1 : - The source_db_instance ARN Is Required By The Read_Replica To Connect Across Region With The Master RDS. Log Into Your AWS account, Search For The RDS Management Console In The Source Region, Which Is By Default "us-east-1". Select The RDS Matching The Idenfier. Click On The Configuration tab, Navigate until you Find The ARN. There Other ways To  Get The Source_db ARN. Copy The ARN and Paste Somewhere Safe For Future Reference.
+STEP 1 : - The source_db_instance ARN Is Required By The Read_Replica To Connect Across Region With The Master RDS. Log Into Your AWS account, Search For The RDS Management Console In The Source Region, Which Is By Default "us-east-1". Select The RDS Matching The Idenfier. Click On The Configuration tab, Navigate until you Find The ARN. Copy The ARN and Paste Somewhere Safe For Future Reference.
+There Are Other ways To  Get The Source_db ARN :
 
    - [x] An Amazon Resource Name Can Be Constructed Using The Following Syntax:
 
