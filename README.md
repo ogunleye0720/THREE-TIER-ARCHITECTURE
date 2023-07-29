@@ -392,3 +392,10 @@ The method of Deployment can be divided into two :-
   ```
 - STEP 6 :- The Entire Process Might Take Approximately 25mins Atmost Depending On Network Connection !!!! Just Be Patient
 - STEP 7 :- Once The Process Is Completed, Log Into Your AWS Management Console And Verify All Resources Are Created !!
+
+## RELATIONAL DATABASE (RDS) READ_REPLICA DEPLOYMENT (OPTIONAL)
+This Deployment Is Optional, And Is Applicable To All Deployment Use-Cases (Multi-Team Deployment With Remote State Management And Deployment Without Remote State Management) !!
+
+In Summary, An AWS Read_Replica Is A DataBase Service Provided By Aws To Enable Duplication Of A Master DataBase Instance In The Same Region Or Different Region. This Replica Is A Read-Only Dupicate Of The Master DataBase Instance. For A Cross-Regional Read_Replica, In This Project Use-Case, Serves The Sole Purpose Of Backing Up The Master DataBase In The Source Region Incase Of Disasters. In the event Of A Disaster In The Primary Region, The cross-regional Read_Replica Can Be Promoted To Become The New Primary Instance, Thus Minimizing Downtime And Data Loss.
+
+## STEPS TO DEPLOY A CROSS-REGIONAL READ_REPLICA RDS INSTANCE
