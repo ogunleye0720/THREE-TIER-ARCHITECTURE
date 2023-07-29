@@ -242,4 +242,18 @@ The method of Deployment can be divided into two :-
    }
  
   ```
+- STEP 8 : - Deploy The Three-Tier-Architecture Infrastructure To AWS. 
   
+  ```
+  path/to/THREE-TIER-ARCHITECTURE$ terraform init
+  ```
+  
+  ```
+  path/to/THREE-TIER-ARCHITECTURE$ terraform plan
+  ```
+  
+  ```
+  path/to/THREE-TIER-ARCHITECTURE$ terraform apply -auto-approve
+  ```
+- STEP 9 :- The Entire Process Might Take Approximately 25mins Atmost Depending On Network Connection !!!! Just Be Patient
+- STEP 10 :- Once The Process Is Completed, Log Into Your AWS Management Console And Verify All Resources Are Created !!
