@@ -7,7 +7,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 ### ARCHITECTURE OVERVIEW
 
 1. VIRTUAL PRIVATE CLOUD FOR REGION-1 : A Virtual Private Cloud (VPC) is a logically isolated virtual network in the cloud that allows 
-   the provisioning and management of resources, such as compute instances, databases, and LoadBalancers, within a defined virtual 
+   the provisioning and management of resources, such as compute instances, databases, and LoadBalancers within a defined virtual 
    network.
    The VPC consists of the following resources:
 
