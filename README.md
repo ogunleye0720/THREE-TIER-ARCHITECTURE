@@ -13,7 +13,8 @@ This documentation provides an overview and step-by-step guide to deploy a Three
 
      - [x] ROUTE-53 :- This is a highly scalable and reliable Domain Name System (DNS) web service provided by Amazon Web Services (AWS).
            Its primary function is to route user request from the internet to the target resources, such as loadbalancers, and compute 
-           instances. In this three-tier-architecture, the route53 is used to route user request from the internet to the internet-facing            load-balancers.
+           instances. In this three-tier-architecture, the route53 is used to route user request from the internet to the        
+           internet-facing load-balancers.
            
      - [x] WAF :- The Web Application Firewall is a service managed by AWS, it serves a primary function of  protecting web applications 
            from web exploits and security threats, such as Account Take-over, Bots, SQL-injecton, Cross-site scripting, by filtering and 
@@ -48,7 +49,7 @@ This documentation provides an overview and step-by-step guide to deploy a Three
            The presentation Layer consists of the following resources:
 
           -  NAT-GATEWAY :- The Network Address Translator in AWS, enables the instances in a private subnet to  communicate with the 
-            internet or other AWS services while preventing inbound traffic initiated from the internet to reach the instances directly.
+             internet or other AWS services while preventing inbound traffic initiated from the internet to reach the instances directly.
 
           -  LAUNCH-TEMPLATE AND AUTOSCALING GROUP :- An AWS Launch Template is a configuration template that defines the various 
              parameters needed to launch EC2 instances. An AWS Auto Scaling group is a core component of Amazon Web Services (AWS) that 
@@ -66,7 +67,8 @@ This documentation provides an overview and step-by-step guide to deploy a Three
            
 ### PREREQUISITES
 
-- An AWS account with appropriate IAM permissions. Recommendable, create a user with administrative privileges globally. This would enable seamless transitioning between regions while provisioning multi-regional resources.
+- An AWS account with appropriate IAM permissions. Recommendable, create a user with administrative privileges globally. This would 
+  enable seamless transitioning between regions while provisioning multi-regional resources.
 - Terraform installed on your local machine.
 - Basic knowledge of AWS services, Terraform, and Networking concepts.
 
@@ -396,6 +398,53 @@ The method of Deployment can be divided into two :-
 ## RELATIONAL DATABASE (RDS) READ_REPLICA DEPLOYMENT (OPTIONAL)
 This Deployment Is Optional, And Is Applicable To All Deployment Use-Cases (Multi-Team Deployment With Remote State Management And Deployment Without Remote State Management) !!
 
-In Summary, An AWS Read_Replica Is A DataBase Service Provided By Aws To Enable Duplication Of A Master DataBase Instance In The Same Region Or Different Region. This Replica Is A Read-Only Dupicate Of The Master DataBase Instance. For A Cross-Regional Read_Replica, In This Project Use-Case, Serves The Sole Purpose Of Backing Up The Master DataBase In The Source Region Incase Of Disasters. In the event Of A Disaster In The Primary Region, The cross-regional Read_Replica Can Be Promoted To Become The New Primary Instance, Thus Minimizing Downtime And Data Loss.
+In Summary, An AWS Read_Replica Is A DataBase Service Provided By AWS To Enable Duplication Of A Master DataBase Instance In The Same Region Or Different Region. This Replica Is A Read-Only Dupicate Of The Master DataBase Instance. For A Cross-Regional Read_Replica, In This Project Use-Case, Serves The Sole Purpose Of Backing Up The Master DataBase In The Source Region Incase Of Disasters. In the event Of A Disaster In The Primary Region, The cross-regional Read_Replica Can Be Promoted To Become The New Primary Instance, Thus Minimizing Downtime And Data Loss.
 
 ## STEPS TO DEPLOY A CROSS-REGIONAL READ_REPLICA RDS INSTANCE
+
+STEP 1 : - The source_db_instance ARN Is Required By The Read_Replica To Connect Across Region With The Master RDS. Log Into Your AWS account, Search For The RDS Management Console In The Source Region, Which Is By Default "us-east-1". Select The RDS Matching The Idenfier. Click On The Configuration tab, Navigate until you Find The ARN. There Other ways To  Get The Source_db ARN. Copy The ARN and Paste Somewhere Safe For Future Reference.
+
+   - [x] An Amazon Resource Name Can Be Constructed Using The Following Syntax:
+
+     ```
+     arn:aws:rds:<region>:<aws account Number>:<resourcetype>:<identifier>
+     ```
+     In Our Use-Case,
+
+     arn:aws:rds:us-east-1:123456789012:db:db-identifier
+
+NOTE !!! The Identifier Is Equivalent To The [var.rds_identifier](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/RDS/variable.tf) declared in RDS module variable.tf file.
+
+STEP 2 : - Open The cloned THREE-TIER-ARCHITECTURE Directory In Your Local Machine, Locate modules sub-directory And Open The 
+           RDS_read_replica module. 
+
+           ```
+           $ path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica
+           ```
+STEP 3 : - Open The variables.tf File And Paste The Source_db_arn in The default placeholder. For Instance;
+
+           ```
+              variable "source_db_arn" {
+                  type = string
+                  default = "arn:aws:rds:us-east-1:123456789012:db:db-identifier"     
+        
+                  # Example of source_db_arn arn:aws:rds:us-east-1:123456789012:db:db-identifier
+              }
+           ```
+STEP 4 : - Edit The .tf Files To Suit Your Use-Case, Ensure All Changes Are Saved.
+
+STEP 5 : - Deploy The RDS_read_replica.
+
+           ```
+           path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform init
+           ```
+           
+           ```
+           path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform plan
+           ```
+           
+           ```
+           path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform apply -auto-approve
+           ```
+
+STEP 6 : - Wait Until The Process Is Completed!!! This Process Might Take Approximately 25mins. 
