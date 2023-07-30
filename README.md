@@ -451,4 +451,5 @@ STEP 8 :- Verify All Resources Were Created.
 | NAME | DESCRIPTION | DEFAULT REGION | REQUIRED |
 |------|-------------|-----------------|:--------:|
 |[cloudgen-s3](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | AWS S3 Bucket To Store .tfstate Files Remotely. | us-east-1 | Optional |
-|[dynamodb](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | Dynamodb database to enable state locking | us-east-1 | Optional |
+|[dynamodb](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/dynamodb.tf) | Dynamodb database to enable state locking | us-east-1 | Optional |
+|[aws_sns_topic](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L2-5) | Dynamodb database to enable state locking | us-east-1 | Optional |
