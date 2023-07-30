@@ -420,7 +420,7 @@ STEP 2 : - Open The cloned THREE-TIER-ARCHITECTURE Directory In Your Local Machi
            RDS_read_replica module. 
 
            $ path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica
-STEP 3 : - Open The variables.tf File And Paste The Source_db_arn in The default placeholder. For Instance;
+STEP 3 :- Open The variables.tf File And Paste The Source_db_arn in The default placeholder. For Instance;
 
               variable "source_db_arn" {
                   type = string
@@ -428,9 +428,11 @@ STEP 3 : - Open The variables.tf File And Paste The Source_db_arn in The default
         
                   # Example of source_db_arn arn:aws:rds:us-east-1:123456789012:db:db-identifier
               }
-STEP 4 : - Edit The .tf Files To Suit Your Use-Case, Ensure All Changes Are Saved.
+STEP 4 :- Edit The .tf Files To Suit Your Use-Case, Ensure All Changes Are Saved.
 
-STEP 5 : - Deploy The RDS_read_replica.
+NOTE :- The Default Region Of The Read_replica is "us-west-2". 
+
+STEP 5 :- Deploy The RDS_read_replica.
 
            path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform init
            
@@ -438,4 +440,12 @@ STEP 5 : - Deploy The RDS_read_replica.
 
            path/to/THREE-TIER-ARCHITECTURE/modules/RDS_read_replica$ terraform apply -auto-approve
          
-STEP 6 : - Wait Until The Process Is Completed!!! This Process Might Take Approximately 25mins. 
+STEP 6 :- Wait Until The Process Is Completed!!! This Process Might Take Approximately 25mins. 
+
+STEP 7 :- Log Into Your Management Console, On The Top Left Corner Of The Navigation Bar, Click The Drop-Down And Switch To The Region 
+          Where The Read_replica was created. 
+STEP 8 :- Verify All Resources Were Created.
+
+## DEFAULT OUTPUT OF THE THREE-TIER-ARCHITECTURE
+
+
