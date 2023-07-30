@@ -446,7 +446,7 @@ STEP 7 :- Log Into Your Management Console, On The Top Left Corner Of The Naviga
           Where The Read_replica was created. 
 STEP 8 :- Verify All Resources Were Created.
 
-## DEFAULT OUTPUT RESOURCES OF THE THREE-TIER-ARCHITECTURE
+## DEFAULT OUTPUT RESOURCES FOR THE THREE-TIER-ARCHITECTURE
 
 | NAME | DESCRIPTION | DEFAULT REGION  | REQUIRED |
 |------|-------------|-----------------|:--------:|
