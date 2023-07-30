@@ -1,14 +1,8 @@
 # This is terraform module that creates and manage S3 bucket and a dynamo db to store state
 # Files remotely and enable remote state locking. 
 
-resource "random_string" "random" {
-  length           = 4
-  special          = true
-  override_special = "/@£$"
-}
-
 resource "aws_s3_bucket" "cloudgen-s3" {
-  bucket = "cloudgen-bucket-${random_string.random.id}"
+  bucket = "cloudgen-bucket-multi-layer"
 
   versioning {
     enabled = var.versioning_enabled
