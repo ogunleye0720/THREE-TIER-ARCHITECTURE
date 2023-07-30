@@ -448,4 +448,7 @@ STEP 8 :- Verify All Resources Were Created.
 
 ## DEFAULT OUTPUT OF THE THREE-TIER-ARCHITECTURE
 
-
+| NAME | DESCRIPTION | DEFAULT REGION | REQUIRED |
+|------|-------------|-----------------|:--------:|
+|[cloudgen-s3](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | AWS S3 Bucket To Store .tfstate Files Remotely. | us-east-1 | Optional |
+|[dynamodb](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | Dynamodb database to enable state locking | us-east-1 | Optional |
