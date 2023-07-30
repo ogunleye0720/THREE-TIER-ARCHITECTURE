@@ -446,7 +446,7 @@ STEP 7 :- Log Into Your Management Console, On The Top Left Corner Of The Naviga
           Where The Read_replica was created. 
 STEP 8 :- Verify All Resources Were Created.
 
-## DEFAULT RESOURCES OF THE THREE-TIER-ARCHITECTURE
+## DEFAULT OUTPUT RESOURCES OF THE THREE-TIER-ARCHITECTURE
 
 | NAME | DESCRIPTION | DEFAULT REGION  | REQUIRED |
 |------|-------------|-----------------|:--------:|
@@ -475,3 +475,10 @@ STEP 8 :- Verify All Resources Were Created.
 |[aws_route53_record](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Route_53/main.tf?plain=1#L7-18) |  Enables Registration Of DNS Rcords   | us-east-1 | YES |
 |[aws_wafv2_web_acl](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/WAF/main.tf?plain=1#L3-41) |  Creates And Manages A Web Access Control List (ACL) Using AWS Web Application Firewall (WAF) V2   | us-east-1 | Optional |
 |[aws_wafv2_web_acl_association](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/WAF/main.tf?plain=1#L46-49) |  Enables The Associate Of AWS Web Application Firewall (WAF) V2 Web Access Control List (ACL) With The Presentation_layer Application Load Balancer (ALB)   | us-east-1 | Optional |
+
+## CONCLUSION
+In Conclusion, The AWS Three-Tier-Architecture Is A Robust And Scalable Solution For Building And Deploying Modern Web Applications. By Dividing The Application Into Three Distinct Layers; Presentation, Application, And Data Layers, Developers Can Focus On Building Applications Without Worrying About Managing The Underlying Infrastructure. This Architecture Provides A Clear Separation Of Concerns, Making It Easier To Develop, Maintain, Recover From Disaster, And Scale Applications.
+
+## REFERENCE
+- [Terraform-Docs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
+- [AWS-Docs](https://docs.aws.amazon.com/)
