@@ -446,10 +446,15 @@ STEP 7 :- Log Into Your Management Console, On The Top Left Corner Of The Naviga
           Where The Read_replica was created. 
 STEP 8 :- Verify All Resources Were Created.
 
-## DEFAULT OUTPUT OF THE THREE-TIER-ARCHITECTURE
+## DEFAULT RESOURCES OF THE THREE-TIER-ARCHITECTURE
 
-| NAME | DESCRIPTION | DEFAULT REGION | REQUIRED |
+| NAME | DESCRIPTION | DEFAULT REGION  | REQUIRED |
 |------|-------------|-----------------|:--------:|
 |[cloudgen-s3](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | AWS S3 Bucket To Store .tfstate Files Remotely. | us-east-1 | Optional |
 |[dynamodb](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/dynamodb.tf) | Dynamodb database to enable state locking | us-east-1 | Optional |
-|[aws_sns_topic](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L2-5) | Dynamodb database to enable state locking | us-east-1 | Optional |
+|[aws_sns_topic](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L2-5) | Creates SNS Topic CPU-Usage Notification | us-east-1 | Optional |
+|[aws_sns_topic_subscription](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L8-13) | Creates SNS Topic Subscription For CPU-Usage Notification | us-east-1 | Optional |
+|[aws_cloudwatch_metric_alarm](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L16-73) | Creates CloudWatch Metric Alarm For Presentation Layer, Application Layer, And Data Layer. It Monitors The EC2 Instance CPU Usage  | us-east-1 | Optional |
+|[aws_launch_template](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Compute/main.tf?plain=1#L19-71) | Creates A Launch_Template That Defines Various Settings For Launching EC2 Instances In Presentation Layer And Application Layer | us-east-1 | YES |
+|[aws_autoscaling_group](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Compute/main.tf?plain=1#L79-111) | Helps To Automatically Manage And Maintain A Group Of Identical EC2 Instances | us-east-1 | YES |
+|[aws_autoscaling_attachment](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Compute/main.tf?plain=1#L119-130) | Attachment The EC2 Instance To An AWS Auto Scaling Group (ASG) | us-east-1 | YES |
