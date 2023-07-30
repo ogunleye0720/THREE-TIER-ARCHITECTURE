@@ -450,8 +450,8 @@ STEP 8 :- Verify All Resources Were Created.
 
 | NAME | DESCRIPTION | DEFAULT REGION  | REQUIRED |
 |------|-------------|-----------------|:--------:|
-|[cloudgen-s3](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | AWS S3 Bucket To Store .tfstate Files Remotely. | us-east-1 | Optional |
-|[dynamodb](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/dynamodb.tf) | Dynamodb database to enable state locking | us-east-1 | Optional |
+|[aws_s3](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/s3.tf) | AWS S3 Bucket To Store .tfstate Files Remotely. | us-east-1 | Optional |
+|[aws_dynamodb](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/Backend/dynamodb.tf) | Dynamodb database to enable state locking | us-east-1 | Optional |
 |[aws_sns_topic](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L2-5) | Creates SNS Topic CPU-Usage Notification | us-east-1 | Optional |
 |[aws_sns_topic_subscription](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L8-13) | Creates SNS Topic Subscription For CPU-Usage Notification | us-east-1 | Optional |
 |[aws_cloudwatch_metric_alarm](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Cloudwatch_Alarm/main.tf?plain=1#L16-73) | Creates CloudWatch Metric Alarm For Presentation Layer, Application Layer, And Data Layer. It Monitors The EC2 Instance CPU Usage  | us-east-1 | Optional |
@@ -466,3 +466,7 @@ STEP 8 :- Verify All Resources Were Created.
 |[aws_internet_gateway](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Network/main.tf?plain=1#L67-77) |  Enables Communication Between Resources Within An Amazon Virtual Private Cloud (VPC) And The Internet. | us-east-1 | YES |
 |[aws_eip](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Network/main.tf?plain=1#L81-87) | Attaches A Dynamic Ip Address To The Nat Gateway  | us-east-1 | YES |
 |[aws_nat_gateway](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Network/main.tf?plain=1#L89-95) | Ensures Consistent Communication Between The Resources In The Private Subnets And The Internet.  | us-east-1 | YES |
+|[aws_route_table](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Network/main.tf?plain=1#L104-167) |  Controls The Traffic Between Subnets Within The Virtual Private Cloud (VPC)   | us-east-1 | YES |
+|[aws_security_group](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/Network/main.tf?plain=1#L169-284) |  A Virtual Firewall That Controls Inbound And Outbound Traffic To And Fro AWS Resources, Such As The EC2 Instances Or RDS Instances   | us-east-1 | YES |
+|[aws_db_subnet_group](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/RDS/main.tf?plain=1#L1-4) | Defines Which Subnets In A Virtual Private Cloud (VPC) Available For Use By The RDS Database Instances   | us-east-1 | YES |
+|[aws_db_instances](https://github.com/ogunleye0720/THREE-TIER-ARCHITECTURE/blob/master/modules/RDS/main.tf?plain=1#L10-35) |  Enables Provisioning Of RDS Instances With Specific Configurations, Including The Database Engine, Instance Type, Storage, And Other Settings   | us-east-1 | YES |
