@@ -1,4 +1,4 @@
-#                                             AWS-THREE-TIER-ARCHITECTURE
+#         AWS-THREE-TIER-ARCHITECTURE (Solution To CloudGen Scalable And Secure Web Application Architecture)
 
 ![THREE-TIER-ARCHITECTURAL-DIAGRAM](Images/AWS-THREE-TIER-ARCHITECTURE-DIAGRAM-2.JPG)
 
