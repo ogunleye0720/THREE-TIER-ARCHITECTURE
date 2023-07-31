@@ -83,7 +83,7 @@ resource "aws_autoscaling_group" "presentation_layer_autoscaling_group" {
   max_size           = 4
   min_size           = 2
   health_check_grace_period = 600
-  health_check_type = "EC2"
+  health_check_type = "ELB"
   default_cooldown = 240
 
   launch_template {
@@ -101,7 +101,7 @@ resource "aws_autoscaling_group" "application_layer_autoscaling_group" {
   max_size           = 4
   min_size           = 2
   health_check_grace_period = 600
-  health_check_type = "EC2"
+  health_check_type = "ELB"
   default_cooldown = 240
 
   launch_template {
