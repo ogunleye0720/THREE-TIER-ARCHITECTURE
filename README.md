@@ -1,5 +1,7 @@
 #                                             AWS-THREE-TIER-ARCHITECTURE
 
+![THREE-TIER-ARCHITECTURAL-DIAGRAM](Images/AWS-THREE-TIER-ARCHITECTURE-DIAGRAM-2.JPG)
+
 ### INTRODUCTION
 
 This documentation provides an overview and step-by-step guide to deploy a Three-Tier Architecture on AWS using Terraform. The Three-Tier Architecture consists of three logical layers: Presentation layer, Application layer, and Data layer. Each layer is designed to handle specific functions, promoting modularity, scalability, availability, resilience and maintainability.
